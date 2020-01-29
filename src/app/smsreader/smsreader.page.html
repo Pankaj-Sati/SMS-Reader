@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-back-button autoHide="false"></ion-back-button>
+    </ion-buttons>
+    <ion-title>SMSReader</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-otp-input  #otpInput (onInputChange)="onOtpChange($event)"  [config]="config"></ng-otp-input>
+  <p class="timer">Timeout in: {{timeout-currentTime}}</p>
+  <p class="smsText">{{smsText}}</p>
+
+  <ion-button expand="block" *ngIf="!isListening" (click)="registerSmsReceiver()">Resend Otp</ion-button>
+  
+</ion-content>

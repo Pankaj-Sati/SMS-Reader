@@ -1,5 +1,7 @@
 {
   "name": "SmsReader",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

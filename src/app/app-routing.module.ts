@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'smsreader',
+    loadChildren: () => import('./smsreader/smsreader.module').then( m => m.SMSReaderPageModule)
   }
 ];
 
